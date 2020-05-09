@@ -26,17 +26,12 @@ int main()
         for(int j=0; j<n; j++)
         {
             int siz = lower_bound(num.begin(), num.end(), j) - num.begin();
-            //if(j <= num[siz])
-            //{
-                if(j > num[num.size()-1])
-                {
-                    ch[s[j]-'a']++;
-                    continue;
-                }
-                ch[s[j]-'a'] += m-siz+1;
-                //cout << ch[s[j]-'a'] << endl;
-            //}
-
+            if(j > num[num.size()-1])
+            {
+                ch[s[j]-'a']++;
+                continue;
+            }
+            ch[s[j]-'a'] += m-siz+1;
         }
         for(int j=0; j<26; j++)
         {
